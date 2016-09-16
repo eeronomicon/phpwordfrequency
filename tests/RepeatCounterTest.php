@@ -41,6 +41,15 @@
         $result = $test_RepeatCounter->wordMatch($input1, $input2);
         $this->assertEquals(true, $result);
       }
+
+      function test_word_non_alpha()
+      {
+        $test_RepeatCounter = new RepeatCounter;
+        $input1 = 'wd-40';
+        $input2 = 'WD-40';
+        $result = $test_RepeatCounter->wordMatch($input1, $input2);
+        $this->assertEquals(true, $result);
+      }
       // function test_score_letter_1 ()
       // {
       //   $test_onepoint_letters = new Game;
