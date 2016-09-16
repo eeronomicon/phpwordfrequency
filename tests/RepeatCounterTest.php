@@ -8,28 +8,37 @@
 
       function test_word_match()
       {
-        $test_wordscore = new RepeatCounter;
+        $test_RepeatCounter = new RepeatCounter;
         $input1 = 'hello';
         $input2 = 'hello';
-        $result = $test_wordscore->wordMatch($input1, $input2);
+        $result = $test_RepeatCounter->wordMatch($input1, $input2);
         $this->assertEquals(true, $result);
       }
 
       function test_word_non_match()
       {
-        $test_wordscore = new RepeatCounter;
+        $test_RepeatCounter = new RepeatCounter;
         $input1 = 'hello';
         $input2 = 'goodbye';
-        $result = $test_wordscore->wordMatch($input1, $input2);
+        $result = $test_RepeatCounter->wordMatch($input1, $input2);
         $this->assertEquals(false, $result);
       }
 
       function test_word_full_only()
       {
-        $test_wordscore = new RepeatCounter;
+        $test_RepeatCounter = new RepeatCounter;
         $input1 = 'bread';
         $input2 = 'cornbreads';
-        $result = $test_wordscore->wordMatch($input1, $input2);
+        $result = $test_RepeatCounter->wordMatch($input1, $input2);
+        $this->assertEquals(false, $result);
+      }
+
+      function test_word_case_insensitivity()
+      {
+        $test_RepeatCounter = new RepeatCounter;
+        $input1 = 'HellO';
+        $input2 = 'hELlO';
+        $result = $test_RepeatCounter->wordMatch($input1, $input2);
         $this->assertEquals(false, $result);
       }
       // function test_score_letter_1 ()
