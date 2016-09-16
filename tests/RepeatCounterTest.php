@@ -39,7 +39,7 @@
         $input1 = 'HellO';
         $input2 = 'hELlO';
         $result = $test_RepeatCounter->wordMatch($input1, $input2);
-        $this->assertEquals(false, $result);
+        $this->assertEquals(true, $result);
       }
       // function test_score_letter_1 ()
       // {
