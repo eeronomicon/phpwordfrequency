@@ -36,8 +36,8 @@ Create a website in Silex that returns how frequently a word appears in a given 
 * Match first word with second word that has a single leading punctuation (e.g., quote, double quote, parenthesis, bracket, curly bracket)
   * Input: "Hello", ""Hello" (examine words that might be in a quotation)
   * Output: true
-* Match the first word with a second word that has one or two trailing punctuations (e.g., period, comma, colon, semicolon, parenthesis, bracket, curly bracket, quote, double quote, exclamation point, question mark)
-  * Input: "hello", "hello?"" (look for words that conclude a quotation)
+* Match the first word with a second word that has a trailing punctuation (e.g., period, comma, colon, semicolon, parenthesis, bracket, curly bracket, quote, double quote, exclamation point, question mark)
+  * Input: "hello", "hello?" (look for words that conclude a sentence)
   * Output: true
 * Determine the number of occurrences of a specified word within another specified group of words:
   * Input: "the", "In the room of percussion (The drums and The) Mallets speak to thee)" (includes examples of heterogenous case, preceding and trailing punctuation, and full word matches)
