@@ -6,6 +6,8 @@
         {
             if ($input1 == $input2) {
                 return true;
+            } else {
+                return false;
             }
         }
 

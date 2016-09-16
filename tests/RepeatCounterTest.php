@@ -15,6 +15,15 @@
         $this->assertEquals(true, $result);
       }
 
+      function test_word_non_match()
+      {
+        $test_wordscore = new RepeatCounter;
+        $input1 = 'hello';
+        $input2 = 'goodbye';
+        $result = $test_wordscore->wordMatch($input1, $input2);
+        $this->assertEquals(false, $result);
+      }
+
       // function test_score_letter_1 ()
       // {
       //   $test_onepoint_letters = new Game;
