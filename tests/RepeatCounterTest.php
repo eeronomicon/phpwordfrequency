@@ -50,6 +50,16 @@
         $result = $test_RepeatCounter->wordMatch($input1, $input2);
         $this->assertEquals(true, $result);
       }
+
+      function test_word_leading_punctuation()
+      {
+        $test_RepeatCounter = new RepeatCounter;
+        $input1 = 'hello';
+        $input2 = '"Hello';
+        $result = $test_RepeatCounter->wordMatch($input1, $input2);
+        $this->assertEquals(true, $result);
+      }
+
       // function test_score_letter_1 ()
       // {
       //   $test_onepoint_letters = new Game;
