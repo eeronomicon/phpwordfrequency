@@ -40,8 +40,8 @@ Create a website in Silex that returns how frequently a word appears in a given 
   * Input: "hello", "hello?" (look for words that conclude a sentence)
   * Output: true
 * Determine the number of occurrences of a specified word within another specified group of words:
-  * Input: "the", "In the room of percussion (The drums and The) Mallets speak to thee)" (includes examples of heterogenous case, preceding and trailing punctuation, and full word matches)
-  * Output: 3
+  * Input: "the", "The room of the percussions contains (The drums and The) Mallets for thee." (includes examples of heterogenous case, preceding and trailing punctuation, and full word matches)
+  * Output: 4
 
 ## Known Bugs
 

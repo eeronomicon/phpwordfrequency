@@ -22,5 +22,18 @@
             }
         }
 
+        function CountRepeats($input1, $input2)
+        {
+            $input_array = explode(" ", $input2);
+            $output_array = array();
+            foreach ($input_array as $word)
+            {
+                if ($this->wordMatch($input1, $word)) {
+                    array_push($output_array, $word);
+                }
+            }
+            return count($output_array);
+        }
+
     }
 ?>

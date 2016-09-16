@@ -69,19 +69,14 @@
         $this->assertEquals(true, $result);
       }
 
-      // function test_score_letter_1 ()
-      // {
-      //   $test_onepoint_letters = new Game;
-      //   $input_array = array('a','e','i','o','u','l','n','r','s','t');
-      //   $expected_result = [1,1,1,1,1,1,1,1,1,1];
-      //   $result_array = array();
-      //   foreach ($input_array as $letter) {
-      //       $result = $test_onepoint_letters->scoreLetter($letter);
-      //       array_push($result_array, $result);
-      //   }
-      //   $this->assertEquals($result_array, $expected_result);
-      // }
-
+      function test_word_count()
+      {
+        $test_RepeatCounter = new RepeatCounter;
+        $input1 = 'the';
+        $input2 = 'The room of the percussions contains (The drums and The) Mallets for thee.';
+        $result = $test_RepeatCounter->CountRepeats($input1, $input2);
+        $this->assertEquals(4, $result);
+      }
 
    }
  ?>
