@@ -2,6 +2,9 @@
 
 
 // Front End Code
-$(document).ready (function(){
+$(document).ready(function(){
+  $('#btnClear').click(function() {
+    $('.form-control').val('');
+  });
 
 });
