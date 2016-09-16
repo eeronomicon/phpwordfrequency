@@ -18,10 +18,10 @@ Create a website in Silex that returns how frequently a word appears in a given 
 
 ## Specifications
 
-* Determine whether the first word matches the next word:
+* Determine whether the first word matches the next word
   * Input: "hello", "hello" (most basic match of identical words)
   * Output: true
-* Determine whether the first word does not match the next word:
+* Determine whether the first word does not match the next word
   * Input: "hello", "goodbye" (determine non-match of inputs)
   * Output: false
 * Check for full word matches
@@ -40,7 +40,7 @@ Create a website in Silex that returns how frequently a word appears in a given 
   * Input: "hello", "hello?"" (look for words that conclude a quotation)
   * Output: true
 * Determine the number of occurrences of a specified word within another specified group of words:
-  * Input: "the", "In the room of percussion the drums and The mallets speak to thee"
+  * Input: "the", "In the room of percussion (The drums and The) Mallets speak to thee)" (includes examples of heterogenous case, preceding and trailing punctuation, and full word matches)
   * Output: 3
 
 ## Known Bugs
