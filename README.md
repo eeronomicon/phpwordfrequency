@@ -1,28 +1,47 @@
-# _{Application Name}_
+# _Word Frequency_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _An exercise in BDD Specification and Test Development and Execution, 16 September 2016_
 
-#### By _**{List of contributors}**_
+#### By _**HK Kahng**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+Exercise requirements are as follows:
+
+Create a website in Silex that returns how frequently a word appears in a given string. The user should input both the word and the string of words to check. Check for full word matches only.
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+* Download and unzip project
+* Start php server with the web directory as the root
+* Open a browser and navigate to the localhost root
 
 ## Specifications
 
-* Replace one whole word in a sentence with another whole word
-    * Input: "Hello world", "world", "universe"
-    * Output: "Hello universe"
+* Determine whether the first word matches the next word:
+  * Input: "hello", "hello" (most basic match of identical words)
+  * Output: true
+* Determine whether the first word does not match the next word:
+  * Input: "hello", "goodbye" (determine non-match of inputs)
+  * Output: false
+* Check for full word matches
+  * Input: "bread", "cornbreads" (the second word contains the first word within itself)
+  * Output: false
+* Match words regardless of upper/lowercase
+  * Input: "heLLo", "HellO" (identical words with heterogenous casing)
+  * Output: true
+* Match strings that are not exclusively alphabetical words
+  * Input: "wd-40", "WD-40" (words comprised of letters, numbers and symbols)
+  * Output true
+* Match first word with second word that has a single leading punctuation (e.g., quote, double quote, parenthesis, bracket, curly bracket)
+  * Input: "Hello", ""Hello" (examine words that might be in a quotation)
+  * Output: true
+* Match the first word with a second word that has one or two trailing punctuations (e.g., period, comma, colon, semicolon, parenthesis, bracket, curly bracket, quote, double quote, exclamation point, question mark)
+  * Input: "hello", "hello?"" (look for words that conclude a quotation)
+  * Output: true
+* Determine the number of occurrences of a specified word within another specified group of words:
+  * Input: "the", "In the room of percussion the drums and The mallets speak to thee"
+  * Output: 3
 
 ## Known Bugs
 
@@ -38,6 +57,6 @@ _{Tell me about the languages and tools you used to create this app. Assume that
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+The MIT License applies to this application.
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2016 **_HK Kahng_**
