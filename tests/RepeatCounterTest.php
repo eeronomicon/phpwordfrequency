@@ -24,6 +24,14 @@
         $this->assertEquals(false, $result);
       }
 
+      function test_word_full_only()
+      {
+        $test_wordscore = new RepeatCounter;
+        $input1 = 'bread';
+        $input2 = 'cornbreads';
+        $result = $test_wordscore->wordMatch($input1, $input2);
+        $this->assertEquals(false, $result);
+      }
       // function test_score_letter_1 ()
       // {
       //   $test_onepoint_letters = new Game;
