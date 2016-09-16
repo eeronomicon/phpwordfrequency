@@ -11,7 +11,7 @@
         $test_RepeatCounter = new RepeatCounter;
         $input1 = 'hello';
         $input2 = 'hello';
-        $result = $test_RepeatCounter->wordMatch($input1, $input2);
+        $result = $test_RepeatCounter->WordMatch($input1, $input2);
         $this->assertEquals(true, $result);
       }
 
@@ -20,7 +20,7 @@
         $test_RepeatCounter = new RepeatCounter;
         $input1 = 'hello';
         $input2 = 'goodbye';
-        $result = $test_RepeatCounter->wordMatch($input1, $input2);
+        $result = $test_RepeatCounter->WordMatch($input1, $input2);
         $this->assertEquals(false, $result);
       }
 
@@ -29,7 +29,7 @@
         $test_RepeatCounter = new RepeatCounter;
         $input1 = 'bread';
         $input2 = 'cornbreads';
-        $result = $test_RepeatCounter->wordMatch($input1, $input2);
+        $result = $test_RepeatCounter->WordMatch($input1, $input2);
         $this->assertEquals(false, $result);
       }
 
@@ -38,7 +38,7 @@
         $test_RepeatCounter = new RepeatCounter;
         $input1 = 'HellO';
         $input2 = 'hELlO';
-        $result = $test_RepeatCounter->wordMatch($input1, $input2);
+        $result = $test_RepeatCounter->WordMatch($input1, $input2);
         $this->assertEquals(true, $result);
       }
 
@@ -47,7 +47,7 @@
         $test_RepeatCounter = new RepeatCounter;
         $input1 = 'wd-40';
         $input2 = 'WD-40';
-        $result = $test_RepeatCounter->wordMatch($input1, $input2);
+        $result = $test_RepeatCounter->WordMatch($input1, $input2);
         $this->assertEquals(true, $result);
       }
 
@@ -56,7 +56,7 @@
         $test_RepeatCounter = new RepeatCounter;
         $input1 = 'hello';
         $input2 = '"Hello';
-        $result = $test_RepeatCounter->wordMatch($input1, $input2);
+        $result = $test_RepeatCounter->WordMatch($input1, $input2);
         $this->assertEquals(true, $result);
       }
 
@@ -65,7 +65,7 @@
         $test_RepeatCounter = new RepeatCounter;
         $input1 = 'hello';
         $input2 = 'Hello?';
-        $result = $test_RepeatCounter->wordMatch($input1, $input2);
+        $result = $test_RepeatCounter->WordMatch($input1, $input2);
         $this->assertEquals(true, $result);
       }
 

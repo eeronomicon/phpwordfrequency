@@ -1,7 +1,7 @@
 <?php
     class RepeatCounter
     {
-        function removePunctuations($input)
+        function RemovePunctuations($input)
         {
           $punctuations = array('\'','"','(','[','{',',','.','?',')',']','}','!');
           if (in_array(substr($input, 0, 1), $punctuations)) {
@@ -13,9 +13,9 @@
               return $input;
         }
 
-        function wordMatch($input1, $input2)
+        function WordMatch($input1, $input2)
         {
-            if (strtolower($input1) == strtolower($this->removePunctuations($input2))) {
+            if (strtolower($input1) == strtolower($this->RemovePunctuations($input2))) {
                 return true;
             } else {
                 return false;
@@ -28,7 +28,7 @@
             $output_array = array();
             foreach ($input_array as $word)
             {
-                if ($this->wordMatch($input1, $word)) {
+                if ($this->WordMatch($input1, $word)) {
                     array_push($output_array, $word);
                 }
             }
